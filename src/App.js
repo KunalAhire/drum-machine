@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
-
+import DrumPads from './components/DrumPads';
+import DrumTools from './components/DrumTools';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container overflow-hidden text-center">
+        <div className="row main-container">
+          <div className="col-12 border border-warning border-5  p-3">
+            <div className='row'>
+              <div className='col-md-6'>
+                <DrumPads />
+              </div>
+              <div className='col-md-6'>
+                <DrumTools />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   );
 }
