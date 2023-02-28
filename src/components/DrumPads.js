@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { audioClips } from '../config/audioData';
 import { useDispatch, useSelector } from 'react-redux';
 import {keyPress} from './../redux/actions/index';
@@ -24,6 +24,7 @@ const DrumPads = () => {
         return () => {
             document.removeEventListener('keydown', handleKeyDown);
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     
     
@@ -34,7 +35,7 @@ const DrumPads = () => {
                     audioClips.map((clips => {
                         return (
                             <div className="col-4" key={clips.id} onClick={() =>{playSound(clips.keyTrigger)}}>
-                                <div className={`p-4 drum-pad `} id={clips.id}>
+                                <div className={`p-4 drum-pad`} id={clips.id}>
                                     <audio className="clip" id={clips.keyTrigger} src={clips.url}></audio>
                                     {clips.keyTrigger}
                                 </div>
