@@ -58,11 +58,13 @@ const powerReducer = (state = myState, action) => {
             key_Press: "Closed-HH"
           }
         default:
-          return state
+          return state.key_Press
 
       }
+
+
     default:
-      return state.key_Press;
+      return state;
   }
 }
 
