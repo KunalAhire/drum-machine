@@ -2,18 +2,12 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 const DrumTools = () => {
 
-    const myState = useSelector((state) => state.powerReducer);
+    const {key_Press, power} = useSelector((state) => state.powerReducer);
     const dispatch = useDispatch();
-    const [powerToggle, setpowerToggle] = useState("right");
 
-    const machineState = () =>{
-       dispatch({type:'POWER'});
-       if(!myState){
-        setpowerToggle("left")
-       }else{
-        setpowerToggle("right")
-       }
-    }
+     const machineState = () =>{
+        dispatch({type:'POWER'});
+     }
 
     return (
         <div style={{height:"100%"}}>
@@ -21,11 +15,11 @@ const DrumTools = () => {
 
                 <p className='mb-0'>POWER</p>
                 <div className="toggleBtn">   
-                    <div className='switch' style={{float:`${powerToggle}`}} onClick={()=>{machineState();}}></div>
+                    <div className='switch' style={{float:`${power ? 'right':'left'}`}} onClick={()=>{machineState();}}></div>
                 </div>
 
-                <div className='my-3 Info'>
-                    example
+                <div className='my-3 Info' id='display'>
+                    {key_Press}
                 </div>
 
                 <input type="range" className="form-range w-50 my-3 shadow-sm p-3 mb-5 bg-body-tertiary rounded" min="0" max="99" defaultValue={0} id="customRange1"></input>

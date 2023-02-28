@@ -12,7 +12,7 @@
  background-color: #b3b3b3; 
 }
 
-.keys{
+.drum-pad{
   background-color: #8d8d8d;
   box-shadow: 2px 2px 5px black;
   margin: 3px;
@@ -21,7 +21,7 @@
   font-weight: 800;
   cursor: pointer;
 }
-.keys:active {
+.drum-pad:active {
   background-color: #ffc400;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
