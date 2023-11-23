@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import './App.css';
 import DrumPads from './components/DrumPads';
 import DrumTools from './components/DrumTools';
