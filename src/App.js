@@ -1,7 +1,11 @@
+import React, { useState, useRef } from 'react';
 import './App.css';
 import DrumPads from './components/DrumPads';
 import DrumTools from './components/DrumTools';
+
 function App() {
+
+ 
   return (
     <div className="App">
       <div className="container overflow-hidden text-center">
@@ -12,7 +16,7 @@ function App() {
                 <DrumPads />
               </div>
               <div className='col-md-6'>
-                <DrumTools />
+                <DrumTools/>
               </div>
             </div>
           </div>

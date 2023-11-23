@@ -21,6 +21,11 @@
   font-weight: 800;
   cursor: pointer;
 }
+.drum-active{
+  background-color: #ffc400;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
 .drum-pad:active {
   background-color: #ffc400;
   box-shadow: 0 5px #666;
